@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  background-color: grey;
+}
+
+body > div {
+  min-width: 150px;
+  min-height: 150px;
+  background-color: blue;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pip {
+  min-width: 25px;
+  min-height: 25px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=styles.css.map */
