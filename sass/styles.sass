@@ -1,19 +1,59 @@
 body
   display: flex
   background-color: grey
+  flex-wrap: wrap
+  justify-content: center
 
 body > div
-  min-width: 150px
-  min-height: 150px
-  background-color: blue
+  width: 150px
+  background: linear-gradient(#eee, #ccc)
+  height: 150px
   margin: 20px
+  padding: 15px
   display: flex
+  align-items: flex-start
+  justify-content: space-between
+  border-radius: 15px
+  border: 7px solid
+  border-color: white #bbb #999 #bbb
+  box-shadow: 14px 14px 8px #333
+
+.column
+  flex-direction: column
+  justify-content: space-between
+  display: flex
+  height: 100%
+
+.pip
+  min-width: 40px
+  min-height: 40px
+  background-color: #333
+  border-radius: 50%
+  display: inline-block
+  box-shadow: inset 0px 3px 3px black, inset 0px -3px 3px #777
+
+.first-face
   align-items: center
   justify-content: center
 
-.pip
-  min-width: 25px
-  min-height: 25px
-  background-color: black
-  border-radius: 50%
-  display: inline-block
+.second-face
+  align-items: flex-start
+  justify-content: space-between
+  .pip:last-child
+    align-self: flex-end
+
+.third-face
+  align-items: flex-start
+  justify-content: space-between
+  .pip:nth-child(2)
+    align-self: center
+  .pip:last-child
+    align-self: flex-end
+
+.fourth-face
+  justify-content: space-between
+  align-items: flex-start
+
+.fifth-face
+  .column:nth-child(2)
+    justify-content: center
