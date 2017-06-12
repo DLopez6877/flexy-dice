@@ -20,6 +20,21 @@ body > div {
   box-shadow: 14px 14px 8px #333;
 }
 
+.domino {
+  width: 150px;
+  height: 140px;
+  padding-bottom: 190px;
+  position: relative;
+}
+.domino::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  border-bottom: 7px solid #333;
+  top: 50%;
+  left: 0;
+}
+
 .column {
   flex-direction: column;
   justify-content: space-between;
@@ -34,6 +49,11 @@ body > div {
   border-radius: 50%;
   display: inline-block;
   box-shadow: inset 0px 3px 3px black, inset 0px -3px 3px #777;
+}
+
+.domino:nth-child(n+7) .pip {
+  min-width: 30px;
+  min-height: 30px;
 }
 
 .first-face {
@@ -65,7 +85,7 @@ body > div {
   align-items: flex-start;
 }
 
-.fifth-face .column:nth-child(2) {
+.fifth-face .column:nth-child(2), .seventh-face .column:nth-child(2) {
   justify-content: center;
 }
 
